@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>THIS IS A  FIRST PAGE</title>
+    <script language="JavaScript">
+        /*form表单做非空的判断*/
+        function  check()
+        {
+            if(document.form_test.user_name.value=='')
+            {
+                window.alert("姓名不能为空");
+                //姓名输入框获取焦点
+                document.form_test.user_name.focus();
+                return false
+            }
+            if (document.form_test.address.value=='')
+            {
+                window.alert("地址不能为空");
+                document.form_test.address.focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<div align="center">
+    <form name="form_test">
+        <p>
+            姓名:<input type="text" name="user_name" size="15">
+        </p>
+        <p>
+            地址:<input type="text" name="address" size="15">
+        </p>
+        <p>
+            <input type="submit" value="提交" onclick="return(check())">
+        </p>
+    </form>
+</div>
+</body>
+</html>
